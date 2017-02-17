@@ -16,9 +16,28 @@ $(document).ready(function(){
         $(this).toggleClass("done");
       });
 
-      <!--removing items from list-->
-      $("#remove_item").click(function(){
-        var completed = $("#done");
-        $("#complete").append("<li>" + completed + "</li>");
-        $(".done").remove();
+      <!--move done items-->
+      $("#move_item").click(function(){
+        move("#to_do","#complete");
       });
+
+      function move(origin, dest){
+        var orginListElements = $(origin).find("li");
+
+        if(orginListElements.length == 0){
+          return;
+        }
+
+        var lastElement = orginListElements.last();
+
+        var destinationList = $(dest);
+
+        var date = new Date($.now());
+
+        var formatted = date.getHours() + ":" + date.getMinutes()+ ":" + date.getSeconds();
+
+        destinationList.append(lastElement);
+        destinationList.append(formatted);
+      }
+
+});
