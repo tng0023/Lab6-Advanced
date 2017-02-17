@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="Lab6-Advanced.js"></script>
+        <link rel="stylesheet" type="text/css" href="Lab6-Advanced.css">
+  </head>
+
+  <body>
+    <h2>To Do List:</h2>
+    <form>
+      <label>What would you like to add to your list?</label>
+      <input type="text" id="task">
+    <button type="button" id="new_item_html_string">Add List Item</button>
+
+    <ul id="to_do" class="not_done">
+      <li>Laundry</li>
+      <li>Homework</li>
+      <li>Wash Dishes</li>
+      <li>Grocery Shopping</li>
+    </ul>
+    <br>
+
+    <h2>Completed items:</h2>
+    <ul id="complete"></ul>
+
+
+    <br>
+    <label>Click on the items you wish to delete. To confirm deletion,
+    click on the delete button.</label>
+    <br>
+    <button type="button" id="remove_item">Delete Completed Items</button>
+</form>
+  </body>
+</html>
